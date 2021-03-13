@@ -179,7 +179,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      915 字
+      1.2k 字
     </span>
   
 
@@ -189,7 +189,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      10
+      12
        分钟
     </span>
   
@@ -222,11 +222,11 @@
             <h1 style="display: none">岳希航的hexo使用与搭建手册</h1>
             
             <div class="markdown-body">
-              <h1 id="hexo-Github-使用、搭建手册"><a href="#hexo-Github-使用、搭建手册" class="headerlink" title="hexo + Github 使用、搭建手册"></a>hexo + Github 使用、搭建手册</h1><h3 id="使用过程中的参考"><a href="#使用过程中的参考" class="headerlink" title="使用过程中的参考"></a>使用过程中的参考</h3><h4 id="常用命令与操作"><a href="#常用命令与操作" class="headerlink" title="常用命令与操作"></a>常用命令与操作</h4><p><code>hexo clean </code><br><code>hexo g </code><br><code>hexo s </code><br><code>hexo d </code></p>
+              <h1 id="hexo-Github-使用、搭建手册"><a href="#hexo-Github-使用、搭建手册" class="headerlink" title="hexo + Github 使用、搭建手册"></a>hexo + Github 使用、搭建手册</h1><h3 id="使用过程中的参考（日常维护参考）"><a href="#使用过程中的参考（日常维护参考）" class="headerlink" title="使用过程中的参考（日常维护参考）"></a>使用过程中的参考（日常维护参考）</h3><h4 id="常用命令与操作"><a href="#常用命令与操作" class="headerlink" title="常用命令与操作"></a>常用命令与操作</h4><p><code>hexo clean </code><br><code>hexo g </code><br><code>hexo s </code><br><code>hexo d </code></p>
 <h6 id="修改文章标题"><a href="#修改文章标题" class="headerlink" title="修改文章标题"></a>修改文章标题</h6><p>修改front-matter中的title即可。</p>
 <h6 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h6><p>直接删除文件即可。</p>
 <h4 id="常用网址"><a href="#常用网址" class="headerlink" title="常用网址"></a>常用网址</h4><p>模板Fluid官网：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">https://hexo.fluid-dev.com/docs/</a><br>Hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/</a></p>
-<h3 id="搭建时我的参考手册"><a href="#搭建时我的参考手册" class="headerlink" title="搭建时我的参考手册"></a>搭建时我的参考手册</h3><h4 id="Hexo-Github搭建："><a href="#Hexo-Github搭建：" class="headerlink" title="Hexo+Github搭建："></a>Hexo+Github搭建：</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">https://zhuanlan.zhihu.com/p/26625249</a></p>
+<h3 id="搭建时我的参考手册（搭建过程）"><a href="#搭建时我的参考手册（搭建过程）" class="headerlink" title="搭建时我的参考手册（搭建过程）"></a>搭建时我的参考手册（搭建过程）</h3><h4 id="Hexo-Github搭建："><a href="#Hexo-Github搭建：" class="headerlink" title="Hexo+Github搭建："></a>Hexo+Github搭建：</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">https://zhuanlan.zhihu.com/p/26625249</a></p>
 <h4 id="Hexo的使用"><a href="#Hexo的使用" class="headerlink" title="Hexo的使用"></a>Hexo的使用</h4><ul>
 <li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/129245387">https://zhuanlan.zhihu.com/p/129245387</a></li>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></li>
@@ -247,6 +247,9 @@
 <p>显然感受到的是hexo这种类型的博客系统十分好用，我可以十分轻松的将自己的关注点放在内容上，因为添加内容非常方便，我只需要在需要开始写作时点击本地的软件即可，无论是直接在博客上编写还是首先在本地写好，在恰当的时候我可以通过几条简单的命令快速地将最新的内容渲染、上传，就像我现在正在做的这样，简易、快捷的将自己建站的过程记录下来，顺便还可以发表一些感悟。</p>
 <p>另外有一个问题就是fluid模板中，文章页旁边的大纲栏似乎是有些bug的，有些同级标题都没有对齐。</p>
 <hr>
+<p>经过测试我发现，在_post文件夹下管理文章时，可以直接建立文件夹分类管理，在渲染称静态网页时，hexo会自动忽略该文件夹，这样一来管理本地存储的博客上的文章就更加舒适了，可以将一类的文章统一放在一个文件夹下存储。</p>
+<p>而且，经过测试发现，二级文件夹、文件夹下文章的图片、二级文件夹下文章的图片、不同级别文件夹下的同名文章（文件名相同）都可以正确渲染。</p>
+<p>唯一需要注意的便是，更低一级的“文件夹名称”莫要与上一级文章的图片资源文件夹名称撞了（也就是更低一级的分类莫要与上一级的文章名撞了），那样本地管理起来确实有点乱糟糟嘞。</p>
 
             </div>
             <hr>
