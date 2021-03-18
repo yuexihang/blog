@@ -1,0 +1,530 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=&#34;auto&#34;>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.png">
+  <link rel="icon" href="/img/favicon.png">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  
+    <meta name="description" content="Xihang Yue, a student of Zhengzhou University.">
+  
+  <meta name="author" content="Xihang Yue">
+  <meta name="keywords" content="Computer Science">
+  
+  <title>岳希航的hexo使用与搭建手册 - BlOG OF YUE.</title>
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" />
+
+
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css" />
+  <link  rel="stylesheet" href="/lib/hint/hint.min.css" />
+
+  
+    
+    
+      
+      <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/styles/github-gist.min.css" />
+    
+  
+
+  
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_ba1fz6golrf.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_kmeydafke9r.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+<!-- 自定义样式保持在最底部 -->
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    var CONFIG = {"hostname":"yuexihang.ink","root":"/","version":"1.8.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"right","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"copy_btn":true,"image_zoom":{"enable":true},"toc":{"enable":true,"headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"onlypost":false},"web_analytics":{"enable":false,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null}}};
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+  <header style="height: 70vh;">
+    <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand"
+       href="/">&nbsp;<strong>BLOG OF YUE</strong>&nbsp;</a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                Home
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                Archives
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                Categories
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                About
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" data-toggle="modal" data-target="#modalSearch">&nbsp;<i
+                class="iconfont icon-search"></i>&nbsp;</a>
+          </li>
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" href="javascript:">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="banner" id="banner" parallax=true
+         style="background: url('/img/default.jpg') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+          <div class="page-header text-center fade-in-up">
+            <span class="h2" id="subtitle" title="岳希航的hexo使用与搭建手册">
+              
+            </span>
+
+            
+              <div class="mt-3">
+  
+  
+    <span class="post-meta">
+      <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+      <time datetime="2021-03-12 17:04" pubdate>
+        March 12, 2021 pm
+      </time>
+    </span>
+  
+</div>
+
+<div class="mt-1">
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-chart"></i>
+      1.2k 字
+    </span>
+  
+
+  
+    
+    <span class="post-meta mr-2">
+      <i class="iconfont icon-clock-fill"></i>
+      
+      
+      12
+       分钟
+    </span>
+  
+
+  
+  
+</div>
+
+            
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="d-none d-lg-block col-lg-2"></div>
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div class="py-5" id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">岳希航的hexo使用与搭建手册</h1>
+            
+            <div class="markdown-body">
+              <h1 id="hexo-Github-使用、搭建手册"><a href="#hexo-Github-使用、搭建手册" class="headerlink" title="hexo + Github 使用、搭建手册"></a>hexo + Github 使用、搭建手册</h1><h3 id="使用过程中的参考（日常维护参考）"><a href="#使用过程中的参考（日常维护参考）" class="headerlink" title="使用过程中的参考（日常维护参考）"></a>使用过程中的参考（日常维护参考）</h3><h4 id="常用命令与操作"><a href="#常用命令与操作" class="headerlink" title="常用命令与操作"></a>常用命令与操作</h4><p><code>hexo clean </code><br><code>hexo g </code><br><code>hexo s </code><br><code>hexo d </code></p>
+<h6 id="修改文章标题"><a href="#修改文章标题" class="headerlink" title="修改文章标题"></a>修改文章标题</h6><p>修改front-matter中的title即可。</p>
+<h6 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h6><p>直接删除文件即可。</p>
+<h4 id="常用网址"><a href="#常用网址" class="headerlink" title="常用网址"></a>常用网址</h4><p>模板Fluid官网：<a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/">https://hexo.fluid-dev.com/docs/</a><br>Hexo官网：<a target="_blank" rel="noopener" href="https://hexo.io/">https://hexo.io/</a></p>
+<h3 id="搭建时我的参考手册（搭建过程）"><a href="#搭建时我的参考手册（搭建过程）" class="headerlink" title="搭建时我的参考手册（搭建过程）"></a>搭建时我的参考手册（搭建过程）</h3><h4 id="Hexo-Github搭建："><a href="#Hexo-Github搭建：" class="headerlink" title="Hexo+Github搭建："></a>Hexo+Github搭建：</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/26625249">https://zhuanlan.zhihu.com/p/26625249</a></p>
+<h4 id="Hexo的使用"><a href="#Hexo的使用" class="headerlink" title="Hexo的使用"></a>Hexo的使用</h4><ul>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/129245387">https://zhuanlan.zhihu.com/p/129245387</a></li>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></li>
+</ul>
+<h4 id="个人域名绑定解决方案："><a href="#个人域名绑定解决方案：" class="headerlink" title="个人域名绑定解决方案："></a>个人域名绑定解决方案：</h4><p><a target="_blank" rel="noopener" href="https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#">https://docs.github.com/en/github/working-with-github-pages/managing-a-custom-domain-for-your-github-pages-site#</a></p>
+<p>注意：阿里云上的域名必须首先完成实名认证，虽然阿里云控制台里面ink域名没有显示必须实名认证（它上面列举了一些后缀称必须实名认证才可以使用，里面并没有ink域名），但我发现怎么都解析不成功，这浪费了我大量的时间，令人厌恶的阿里云。</p>
+<p>若域名解析功能时正常的话，只需要按照官网的要求配置域名DNS的CNAME记录就可以了，不需要设置A记录。</p>
+<h4 id="Hexo-与-typora搭配使用时的图片问题解决方案"><a href="#Hexo-与-typora搭配使用时的图片问题解决方案" class="headerlink" title="Hexo 与 typora搭配使用时的图片问题解决方案"></a>Hexo 与 typora搭配使用时的图片问题解决方案</h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ea78bdd0551f/">https://www.jianshu.com/p/ea78bdd0551f/</a><br>这是一种最普遍的解决方案，另外一种解决方案是基于hexo-easy-assets插件。虽然这个方案看起来很简单，我也很早就找到了，但我一直没有实现，因为没有梯子工具，插件一直安装失败，而且我也一直没有理解其中的两步（设置config文件和安装插件分别的作用是什么），这导致我在图片问题的解决上花费了两三个小时的时间。</p>
+<p>下面为测试图片：</p>
+<p><img src="/2021/03/12/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/%E5%B2%B3%E5%B8%8C%E8%88%AA%E7%9A%84hexo%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%90%AD%E5%BB%BA%E6%89%8B%E5%86%8C/timg.jpg" srcset="/img/loading.gif"></p>
+<hr>
+<p>折腾了一整天（几乎整整24个小时），终于把一些基本问题解决了。目前仍然存在一个问题，就是_posts文件下所有的文章都在一起，我无法按照一定的分类去安排文章的位置，目前我计划的解决方案便是仍然在外面的markdown笔记中写文章，需要上传到博客中时，将文件和对应的图片资源复制到_post文件夹下。</p>
+<p>经过测试，我发现完全可以不使用 <code>hexo new &quot;标题&quot;</code> 命令来创建文章，自己手动创建相应的文章和资源文件夹（与文章标题同名）也是可以的。只是需要自己添加相应的front-matter部分。</p>
+<hr>
+<h4 id="Hexo-Fluid主题实现数学公式"><a href="#Hexo-Fluid主题实现数学公式" class="headerlink" title="Hexo + Fluid主题实现数学公式"></a>Hexo + Fluid主题实现数学公式</h4><p>参考fluid官方文档。</p>
+<hr>
+<p>经过艰苦奋斗，现在可以开始高效地建设blog了，无论是功能、界面还是内容。感觉就好像是建起来一座新房子，最后打扫打扫卫生，然后舒适地住下来~~。</p>
+<p>显然感受到的是hexo这种类型的博客系统十分好用，我可以十分轻松的将自己的关注点放在内容上，因为添加内容非常方便，我只需要在需要开始写作时点击本地的软件即可，无论是直接在博客上编写还是首先在本地写好，在恰当的时候我可以通过几条简单的命令快速地将最新的内容渲染、上传，就像我现在正在做的这样，简易、快捷的将自己建站的过程记录下来，顺便还可以发表一些感悟。</p>
+<p>另外有一个问题就是fluid模板中，文章页旁边的大纲栏似乎是有些bug的，有些同级标题都没有对齐。</p>
+<hr>
+<p>经过测试我发现，在_post文件夹下管理文章时，可以直接建立文件夹分类管理，在渲染称静态网页时，hexo会自动忽略该文件夹，这样一来管理本地存储的博客上的文章就更加舒适了，可以将一类的文章统一放在一个文件夹下存储。</p>
+<p>而且，经过测试发现，二级文件夹、文件夹下文章的图片、二级文件夹下文章的图片、不同级别文件夹下的同名文章（文件名相同）都可以正确渲染。</p>
+<p>唯一需要注意的便是，更低一级的“文件夹名称”莫要与上一级文章的图片资源文件夹名称撞了（也就是更低一级的分类莫要与上一级的文章名撞了），那样本地管理起来确实有点乱糟糟嘞。</p>
+
+            </div>
+            <hr>
+            <div>
+              <div class="post-metas mb-3">
+                
+                  <div class="post-meta mr-3">
+                    <i class="iconfont icon-category"></i>
+                    
+                      <a class="hover-with-bg" href="/categories/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/">建站过程</a>
+                    
+                  </div>
+                
+                
+              </div>
+              
+                <p class="note note-warning">
+                  
+                    本博客所有文章除特别声明外，均采用 <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/deed.zh" rel="nofollow noopener noopener">CC BY-SA 4.0 协议</a> ，转载请注明出处！
+                  
+                </p>
+              
+              
+                <div class="post-prevnext">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2021/03/12/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/%E5%B2%B3%E5%B8%8C%E8%88%AA%E7%9A%84markdown%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">岳希航的markdown学习笔记（markdown格式测试）</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2021/03/11/%E5%BB%BA%E7%AB%99%E8%BF%87%E7%A8%8B/hello-world/">
+                        <span class="hidden-mobile">Hello World</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+    
+      <div class="d-none d-lg-block col-lg-2 toc-container" id="toc-ctn">
+        <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;TOC</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+      </div>
+    
+  </div>
+</div>
+
+<!-- Custom -->
+
+
+    
+
+    
+      <a id="scroll-top-button" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v"
+                 for="local-search-input">keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+    
+  </main>
+
+  <footer class="text-center mt-5 py-3">
+  <div class="footer-content">
+     <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <i class="iconfont icon-brush"></i> <a href="#" rel="nofollow noopener"><span>Xihang Yue</span></a> 
+  </div>
+  
+  <div class="statistics">
+    
+    
+
+    
+      
+        <!-- 不蒜子统计PV -->
+        <span id="busuanzi_container_site_pv" style="display: none">
+            总访问量 
+            <span id="busuanzi_value_site_pv"></span>
+             次
+          </span>
+      
+      
+        <!-- 不蒜子统计UV -->
+        <span id="busuanzi_container_site_uv" style="display: none">
+            总访客数 
+            <span id="busuanzi_value_site_uv"></span>
+             人
+          </span>
+      
+    
+  </div>
+
+
+  
+
+  
+</footer>
+
+<!-- SCRIPTS -->
+
+  <script  src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" ></script>
+<script  src="/js/debouncer.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+<!-- Plugins -->
+
+
+  
+    <script  src="/js/lazyload.js" ></script>
+  
+
+
+
+  
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/tocbot.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" ></script>
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/anchor.min.js" ></script>
+
+
+
+  <script defer src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js" ></script>
+
+
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+  <script  src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var title = document.getElementById('subtitle').title;
+      
+      typing(title)
+      
+    })(window, document);
+  </script>
+
+
+
+  <script  src="/js/local-search.js" ></script>
+  <script>
+    (function () {
+      var path = "/local-search.xml";
+      $('#local-search-input').on('click', function() {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      });
+      $('#modalSearch').on('shown.bs.modal', function() {
+        $('#local-search-input').focus();
+      });
+    })()
+  </script>
+
+
+
+
+
+  
+
+  
+    <!-- MathJax -->
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        },
+        options: {
+          renderActions: {
+            findScript: [10, doc => {
+              document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+                const display = !!node.type.match(/; *mode=display/);
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                const text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = { node: text, delim: '', n: 0 };
+                math.end = { node: text, delim: '', n: 0 };
+                doc.math.push(math);
+              });
+            }, '', false],
+            insertedScript: [200, () => {
+              document.querySelectorAll('mjx-container').forEach(node => {
+                let target = node.parentNode;
+                if (target.nodeName.toLowerCase() === 'li') {
+                  target.parentNode.classList.add('has-jax');
+                }
+              });
+            }, '', false]
+          }
+        }
+      };
+    </script>
+
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@3.1.2/es5/tex-svg.js" ></script>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+<!-- 主题的启动项 保持在最底部 -->
+<script  src="/js/boot.js" ></script>
+
+
+
+</body>
+</html>
