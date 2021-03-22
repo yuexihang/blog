@@ -179,7 +179,7 @@
     
     <span class="post-meta mr-2">
       <i class="iconfont icon-chart"></i>
-      1.5k 字
+      1.6k 字
     </span>
   
 
@@ -189,7 +189,7 @@
       <i class="iconfont icon-clock-fill"></i>
       
       
-      15
+      16
        分钟
     </span>
   
@@ -251,6 +251,9 @@
 <h3 id="网站访问统计的实现"><a href="#网站访问统计的实现" class="headerlink" title="网站访问统计的实现"></a>网站访问统计的实现</h3><p>直接使用了模板Fluid提供的实现方式。需要注意的一个问题：在配置文件夹里面填写webid时应该用双引号括起来，否则会产生一种错误：所有的hexo命令都没有办法正常运行了，都是执行一堆莫名其妙的东西。</p>
 <h3 id="巧用“符号链接”实现博客文章文件夹与本地文章文件夹协同工作"><a href="#巧用“符号链接”实现博客文章文件夹与本地文章文件夹协同工作" class="headerlink" title="巧用“符号链接”实现博客文章文件夹与本地文章文件夹协同工作"></a>巧用“符号链接”实现博客文章文件夹与本地文章文件夹协同工作</h3><p>我设置了每次打开typora的时候都默认打开本地的markdown笔记文件夹，网页中的文章都存放在hexo目录下的_post文件夹，这样每次更新网站都需要打开_post文件夹再把本地的内容复制进去，非常麻烦。于是我在markdown文件夹下建立了一个符号链接指向_post文件夹，这样就可以直接在markdown文件夹下管理网站文章了，也就是直接打开一次typora就可以完成所有工作了！</p>
 <p>符号链接可以使用CMD中的<code>mklink</code>命令实现，一般使用如下格式就可以满足要求：<br><code>mklink /j 设置的符号链接的位置 指向的文件夹</code><br>注意：创建的时候，”设置的符号链接的位置”应该没有与之同名的文件夹。</p>
+<h3 id="使用批处理命令实现博客一键渲染上传"><a href="#使用批处理命令实现博客一键渲染上传" class="headerlink" title="使用批处理命令实现博客一键渲染上传"></a>使用批处理命令实现博客一键渲染上传</h3><p>命令格式如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs shell">@echo off<br>cd /d  博客目录<br>title HexoUpdate<br>cd <br>call hexo clean<br>call hexo g<br>call hexo d<br>pause<br></code></pre></td></tr></table></figure>
+<p>在桌面建立文件，写入上面内容，其中“博客目录”替换为实际的博客目录，修改后缀名为“bat”，就可以实现一键渲染上传。</p>
 
             </div>
             <hr>
